@@ -19,11 +19,12 @@ public class BankAccount {
 
     public void setAccountNumber(int AccountNumber) {
 
-        if (AccountNumber == null){
+        if (AccountNumber >= 100000){
+            this.AccountNumber = AccountNumber;
+        } else {
             this.AccountNumber = currentAccountNumber++;
         }
-
-        this.AccountNumber = AccountNumber;
+        
     }
 
 
